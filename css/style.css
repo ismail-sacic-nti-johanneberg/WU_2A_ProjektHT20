@@ -1,4 +1,5 @@
 *{
+    color: white;
     margin: 0;
     padding: 0;
 }
@@ -7,7 +8,7 @@
 display: grid;
 grid-template-columns: 1fr 2.5fr 1fr;
 
-grid-template-rows: 100px 70px 200px 150px 150px 100px;
+grid-template-rows: 100px 70px 200px 150px 150px auto 100px;
 gap: 0px 0px;
 grid-template-areas:
     "header header header"
@@ -15,21 +16,120 @@ grid-template-areas:
     "aside1 main aside2"
     "aside1 section1 aside2"
     "aside1 section2 aside2"
+    "bild-galler bild-galler bild-galler"
     "footer footer footer";
 }
 
-.header { grid-area: header; }
+/* Header och Nav */
+.header { grid-area: header; 
+display: flex;
+justify-content: center;
+align-items: center;
+background-color: rgb(3, 3, 3);
+font-size: 50px;
+color: white;
+}
 
-.nav { grid-area: nav; }
+.nav { grid-area: nav; 
+display: flex;
+justify-content: center;
+align-items: center;
+background-color: rgb(3, 3, 3);
+color: white;
+}
+ul {
+width: 100%;
+list-style-type: none;
+margin: 0;
+padding: 0;
+overflow: hidden;
+background-color: #333;
+}
 
-.main { grid-area: main; }
+li {
+float: left;
+width: 25%;
+}
 
-.section1 { grid-area: section1; }
+li a {
+display: block;
+color: white;
+text-align: center;
+padding: 14px 16px;
+text-decoration: none;
+}
 
-.section2 { grid-area: section2; }
+li a:hover {
+background-color: #111;
+}
 
-.footer { grid-area: footer; }
 
-.aside2 { grid-area: aside2; }
 
-.aside1 { grid-area: aside1; }
+/*Main, aside och sektions */
+.bild-galler{
+    grid-area: bild-galler;
+}
+.main { grid-area: main; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(170, 165, 165);
+    border-radius: 30px;
+    margin: 20px 20px 20px 20px;
+
+    color: white;
+}
+
+.section1 { grid-area: section1; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(3, 3, 3);
+    color: white;
+}
+
+.section2 { grid-area: section2; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(3, 3, 3);
+    color: white;
+}
+
+.aside1 { grid-area: aside2; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.aside2 { grid-area: aside1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+        color: white;
+ }
+
+
+
+
+
+
+/*Footer och videon för backgrunden*/
+.footer { grid-area: footer; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(3, 3, 3);
+    font-size: 50px;
+    color: white;
+}
+video {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: -1000;
+    top: 0;
+    left: 0;
+  }
