@@ -8,7 +8,7 @@
 display: grid;
 grid-template-columns: 1fr 2.5fr 1fr;
 
-grid-template-rows: 100px auto 2500px 150px 150px auto 200px;
+grid-template-rows: 100px auto 250px 150px 150px auto 200px;
 gap: 0px 0px;
 grid-template-areas:
     "header header header"
@@ -110,16 +110,12 @@ background-color: rgb(112, 112, 112);
  }
 
 
-
-
-
-
 /*Footer och videon för backgrunden*/
 .footer { grid-area: footer; 
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgb(3, 3, 3);
+    background-image: url("/img/footer4.jpg");
     font-size: 50px;
     color: white;
 }
