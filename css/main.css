@@ -3,11 +3,14 @@
     margin: 0;
     padding: 0;
 }
+body{
+    background-image: url("/img/background-black.jpg");
+}
 
 .main-grid {
 display: grid;
 grid-template-columns: 2.5fr 1fr;
-grid-template-rows: 100px 100px 200px auto 100px;
+grid-template-rows: 45px auto auto auto 100px;
 gap: 0px 0px;
 grid-template-areas:
     "header header"
@@ -17,29 +20,54 @@ grid-template-areas:
     "footer footer";
 }
 
-/* Header och Nav */
+/* Header  */
 .header { grid-area: header; 
-display: flex;
-justify-content: center;
-align-items: center;
-/* background-image: url("/img/background-black2.jpg"); */
-font-size: 50px;
-font-family: Tahoma;
-color: rgb(255, 221, 73);
-font-weight: bold;
-font-style: normal;
+position: relative;
+background-image: url("/img/background-black2.jpg");
 }
 
+.header-text {
+
+position: absolute;
+top: 17.5%;
+right: 2%;
+
+
+font-family: Tahoma;
+color: whitesmoke;
+letter-spacing: 4px;
+text-transform: uppercase;
+font-size: 17px;
+font-family: 'Segoe UI',Arial,sans-serif;
+}
+.header-logo {
+position: absolute;
+top: 5%;
+left: 0%;
+
+}
+
+/* NAV  */
 .nav { grid-area: nav;  
+font-weight: 600;
+text-transform: uppercase;
 width: 100%;
-background: lightgray;
+background: #5f5f5f;
+color: #f1f1f1;
+letter-spacing: 1px;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
 }
 .meny-flex{
 height: 100%;
 list-style-type: none;
 }
+#home-icon{
+    width: 8%;
+
+}
 li {
-width: 25%;
+width: 23%;
 float: left;
 }
 
@@ -47,55 +75,61 @@ li a {
 display: block;
 text-align: center  ;
 letter-spacing: 1px;
-padding: 22px 14px;
+padding: 9px 5px;
 color: white;
-font-size: 1.2em;
+font-size: 1.6em;
 text-decoration: none;
 }
 li a:hover {
-background-color: rgb(112, 112, 112);
+    background-color: #000000 !important;
 }
 
 
-
-/*Main, aside och sektions */
+/*Main, aside och sections */
 .main { grid-area: main; 
-}
-#inside-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 100px 100px;
-    gap: 0px 0px;
-    grid-template-areas:
-        "section1 section1"
-        "section2 section2"
-        ;
-    }
-    
-.section { grid-area: section; 
-    background-color: rgb(151, 146, 146);
-}
-.section1 { grid-area: section1; 
-    background-color: rgb(3, 3, 3);
+    color: black;
 }
 
-.section2 { grid-area: section2; 
-    background-color: rgb(3, 3, 3);
-}
+/* Banner */
+.section { grid-area: section; }
 
+.section1, .section2, .aside{
+    color: black;
+    margin: 10px;
+    border-radius: 10px;
+    background-color: rgb(221, 221, 221);
+    border: solid 3px black;
+    font-weight: 600;
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.section1 {  
+    padding: 15px;
+}
+.section2 {
+    padding: 15px;
+ 
+}
 .aside { grid-area: aside2; 
-    background-color: lawngreen;
-
 }
 
 
 
-/*Footer och videon för backgrunden*/
-.footer { grid-area: footer; 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgb(168, 159, 159);
-    font-size: 50px;
-    color: white;
+/*Footer och  backgrunden*/
+.footer {
+grid-area: footer; 
+position: relative;
+text-align: center;
+color: white;
+}
+.center {
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+}
+.ner-vänster {
+position: absolute;
+bottom: 10%;
+left: 16px;
 }
