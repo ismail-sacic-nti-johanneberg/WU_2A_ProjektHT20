@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Logo som kommer komma upp på browser flikern -->
+    <link rel="icon" href="/img/logo.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ismails Pizzeria - Boka ett bord</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="/js/bord.js"></script>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="second-grid">
+
+        <!-- Header -->
+        <header class="header">     
+            <img src="/img/footer.jpg" height="100%" width="100%">
+            <div class="header-logo"><a href="/"><img alt="Startsidans logo" src="/img/pizza-logo.png" width="90%" height="100%"></a></div>
+            <div class="header-text">Mer än bara pizza</div>
+        </header>
+
+                
+        <!-- Nav -->
+        <nav class="nav">
+            <ul class="meny-flex">
+                <li class="home-icon"><a href="/"><i class="fa fa-home"></i></a></li>
+                <li><a href="/templates/om-oss.html">Om oss</a></li>
+                <li><a href="/templates/bestall-online.html">Beställ Online</a></li>
+                <li id="aktiv-meny"><a href="/templates/boka-ett-bord.html">Boka ett bord</a></li>
+                <li><a href="/templates/bilder.html">Bilder</a></li>
+            </ul>
+        </nav >
+
+        
+        <div class="middle-div">
+            <h3>Boka ett bord</h3><br>
+            <form action="">
+
+                <label for="namn">Namn:</label>
+                <input type="text" id="namn" name="namn"><br><br>
+                
+                <p><b>Välj bord:</b></p>
+                <input type="radio" id="bord1" name="bord" value="bord1">
+                <label for="bord">Bord nr 1</label><br>
+
+                <input type="radio" id="bord2" name="bord" value="bord2">
+                <label for="bord2">Bord nr 2</label><br>
+
+                <input type="radio" id="bord3" name="bord" value="bord3">
+                <label for="bord3">Bord nr 3</label><br>
+
+                <input type="radio" id="bord4" name="bord" value="bord4">
+                <label for="bord4">Bord nr 4</label><br>
+
+                <br>  
+                <input id="submit-knapp" type="submit" value="Boka bord">
+                <hr>
+              </form>
+              <small> Grön = Ledig</small><br>
+              <small> Röd = Upptagen</small>
+              <br>
+              <br>
+              <div class="bord-flex">
+              <div id="bord1-div">Bord 1</div>
+              <div id="bord2-div">Bord 2</div>
+              <div id="bord3-div">Bord 3</div>
+              <div id="bord4-div">Bord 4</div>
+            </div>
+
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <img src="/img/footer.jpg" height="100%" width="100%">
+            <div class="center">© Copyright 2020 Ismails Pizzeria</div>
+            <div class="ner-höger"><a class="dokumentation_link"target="blank_" href="/misc/dokumentation.html">Dokumentation</a></div>
+        </footer>
+    </div>
+
+</body>
+</html>

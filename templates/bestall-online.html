@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Logo som kommer komma upp på browser flikern -->
+    <link rel="icon" href="/img/logo.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ismails Pizzeria - Beställ online</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="/js/bestall.js"></script>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="second-grid">
+
+        <!-- Header -->
+        <header class="header">     
+            <img src="/img/footer.jpg" height="100%" width="100%">
+            <div class="header-logo"><a href="/"><img alt="Startsidans logo" src="/img/pizza-logo.png" width="90%" height="100%"></a></div>
+            <div class="header-text">Mer än bara pizza</div>
+        </header>
+
+                
+        <!-- Nav -->
+        <nav class="nav">
+            <ul class="meny-flex">
+                <li class="home-icon"><a href="/"><i class="fa fa-home"></i></a></li>
+                <li><a href="/templates/om-oss.html">Om oss</a></li>
+                <li id="aktiv-meny"><a href="/templates/bestall-online.html">Beställ Online</a></li>
+                <li><a href="/templates/boka-ett-bord.html">Boka ett bord</a></li>
+                <li><a href="/templates/bilder.html">Bilder</a></li>
+            </ul>
+        </nav >
+
+        
+        <div class="middle-div">
+            <div id="hidden-div">
+                Tack för din beställning! Om 15min är din beställningen redo. Vi ses här borta snart :)
+            </div>
+
+            <h3>Gör en beställning :)</h3><br>
+            <form action="#">
+
+                <label for="namn">Namn:</label>
+                <input type="text" id="namn" name="namn"><br><br>
+
+                <label for="efternamn">Efternamn:</label>
+                <input type="text" id="efternamn" name="efternamn"><br><br>
+
+                <label for="mail">E-mail:</label>
+                <input type="number" id="mail" name="mail"><br><br> 
+
+                <label for="sak">Vad vill du beställa:</label>
+                <select id="sak" name="sak">
+                <option value="kebabpizza">Kebabpizza</option>
+                <option value="Margarita">Margarita</option>
+                <option value="hamburgare">Hamburgare</option>
+                </select><br><br>
+            
+                <input id="submit-knapp" type="submit" value="Skicka beställning">
+              </form>
+              
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <img src="/img/footer.jpg" height="100%" width="100%">
+            <div class="center">© Copyright 2020 Ismails Pizzeria</div>
+            <div class="ner-höger"><a class="dokumentation_link"target="blank_" href="/misc/dokumentation.html">Dokumentation</a></div>
+        </footer>
+    </div>
+
+</body>
+</html>

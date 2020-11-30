@@ -1,43 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Logo som kommer komma upp på browser flikern -->
+    <link rel="icon" href="/img/logo.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ismails Pizzeria - Hem</title>
-    <link rel="stylesheet" href="/css/main.css">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
     <div class="main-grid">
+
+        <!-- Header -->
         <header class="header">     
-            <img src="/img/footer3.jpg" height="100%" width="100%">
-            <div class="header-logo"><img src="/img/logo_horizontel.png" width="100%" height="100%"></div>
+            <img src="/img/footer.jpg" height="100%" width="100%">
+            <div class="header-logo"><a href="/"><img alt="Startsidans logo" src="/img/pizza-logo.png" width="90%" height="100%"></a></div>
             <div class="header-text">Mer än bara pizza</div>
         </header>
+
+        <!-- Nav -->
         <nav class="nav">
             <ul class="meny-flex">
-                <li id="home-icon"><a href="/"><i class="fa fa-home"></i></a></li>
-                <li><a href="#om-oss">Om oss</a></li>
-                <li><a href="#bilder">Beställ Online</a></li>
-                <li><a href="#bilder">Boka ett bord</a></li>
-                <li><a href="#bilder">Bilder</a></li>
+                <li class="home-icon" id="aktiv-meny"><a href="/"><i class="fa fa-home"></i></a></li>
+                <li><a href="/templates/om-oss.html">Om oss</a></li>
+                <li><a href="/templates/bestall-online.html">Beställ Online</a></li>
+                <li><a href="/templates/boka-ett-bord.html">Boka ett bord</a></li>
+                <li><a href="/templates/bilder.html">Bilder</a></li>
             </ul>
         </nav >
+
+        <!-- Första section -->
         <section class="section">
-            <img src="/img/pizza-banner.png" height="330" width="100%">
+            <img src="/img/pizza-banner.png" height="330px" width="100%">
         </section>
+
+        <!-- Aside -->
+        <aside class="aside">
+            <h3>Öppetider:</h3>
+            <p>
+                Måndag-fredag: 08:00 - 16:00   
+                <br>            
+                Lördag: 10:00 - 16:00
+                <br>            
+                Söndag: Stängt
+            </p>
+            <hr>
+            <h3>Kontakta oss:</h3>
+            <p>
+                Telefonnummer: 07074423123  
+                <br>            
+                E-mail: <a href="mailto:support@mail.se">support@mail.se</a>
+                <br>            
+                Hitta hit:
+
+                <!-- Mapen är från https://www.embedgooglemap.net/  -->
+                <!-- Denna kod under är kopeirad eftersom att jag inte kan göra en själv. Det är en iframe 
+                map som är med i hemsidan pgd av desgin :)  -->
+                <div class="mapouter"><div class="gmap_canvas"><iframe width="300" height="400" id="gmap_canvas" src="https://maps.google.com/maps?q=nti%20johanneberg&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://www.embedgooglemap.net"></a></div><style>.mapouter{position:relative;text-align:right;height:400px;width:300px;}.gmap_canvas {overflow:hidden;background:none!important;height:400px;width:300px;}</style></div>            </p>
+                <!-- -->
+                
+                <p>Adress: Origovägen 4, 412 58 Göteborg</p>
+
+        </aside>
+
+        <!-- Main -->
         <main class="main">
-            <section class="section1">lor</section>
-            <section class="section2">2</section>
+            <section class="section1">
+                <h3 style="margin-bottom: 5px;">Dagens Lunch</h3>
+                <hr>
+
+                <h4 style="margin-bottom: 5px;">Margarita  60:-</h4>
+                <img src="/img/dagenslunch.jpeg" alt="En bild på Margarita pizza som är ny bakad" width="30%" height="30%">
+                <p> Klassisk margherita med bästa pizzadegen! Toppa med en krämig och god mozzarella eller en riktigt gräddig ost. Pizzan räcker till 4 personer.</p>
+                <hr>
+
+                <h4 style="margin-bottom: 5px;">Kebabpizza 65:-</h4>
+                <img src="/img/dagenslunch2.jpg" alt="En bild på en väldigt god kebabpizza" width="30%" height="30%">
+                <p> Kebabpizza – svenskarnas favoritpizza nummer ett. Den är väldigt god och är topen för dig som är hungirg. Den här kebabpizzan räcker till hela familjen och är både enkel och god</p>
+                <hr>
+
+                <h4 style="margin-bottom: 5px;">Hamburgare 50:-</h4>
+                <img src="/img/dagenslunch3.jpeg" alt="En bild på en hamburgare" width="30%" height="30%">
+                <p> Våran hamburgare är den allra godaste i välrden. En god amerikansk klassiker som gör dig mätt. Den är billig och god :)</p>           
+            </section>
         </main>
-        <aside class="aside"></aside>
+
+        <!-- Andra section -->
+        <section class="section2">
+            <h1>Meny</h1>
+            <hr style="border: 2px black solid ;">
+            <div id="left-div">
+                <h3>Pizza:</h3>
+                <hr>
+                <h5>Veneto 120:-</h5>
+                <p>skinka, räkor, champinjoner,rödlök, paprika</p>
+                <hr>
+
+                <h5>Tellus 120:-</h5>
+                <p>champinjoner, salami, rödlök, paprika, kalamataolive</p>
+                <hr>
+
+                <h5>Tellus Special 120:-</h5>
+                <p>salami, champinjoner, gorgonzola, rödlök</p>
+                <hr>
+
+                <h5>Top Gun 120:-</h5>
+                <p>salami, bacon, paprika, rödlök, ägg</li></p>
+                <hr>
+                <h3>Hamburgare:</h3>
+                <hr>
+                <h5>Veneto 120:-</h5>
+                <p>skinka, räkor, champinjoner,rödlök, paprika</p>
+                <hr>
+
+                <h5>Honung...125:-</h5>
+                <p>salami, bacon, paprika, rödlök, ägg</li></p>
+                <hr>
+
+                <h5>Veneto 120:-</h5>
+                <p>skinka, räkor, champinjoner,rödlök, paprika</p>
+                <hr>
+
+                <h5>Honung...125:-</h5>
+                <p>salami, bacon, paprika, rödlök, ägg</li></p>
+                
+            </div>
+            <div class="vl"></div>
+            <div id="right-div">
+                <h3>Drickor:</h3>
+                <hr>
+                <h5>Cola 20:-</h5>
+                <hr>
+                <h5>Fanta 20:-</h5>
+                <hr>
+                <h5>Sprite 20:-</h5>
+                <hr>
+                <h5>Zingo 20:-</h5>
+                <hr>
+                <h5>Cola light 20:-</h5>
+                <hr>
+            </div>
+    </section>
+
+        <!-- Footer -->
         <footer class="footer">
-            <img src="/img/footer3.jpg" height="100%" width="100%">
-            <div class="ner-vänster">Vänster text</div>
-            <div class="center">Centrerad</div>
+            <img src="/img/footer.jpg" height="100%" width="100%">
+            <div class="center">© Copyright 2020 Ismails Pizzeria</div>
+            <div class="ner-höger"><a class="dokumentation_link"target="blank_" href="/misc/dokumentation.html">Dokumentation</a></div>
         </footer>
-      </div>
+    </div>
 
 </body>
 </html>
